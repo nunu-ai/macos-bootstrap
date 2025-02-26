@@ -34,6 +34,9 @@
               nix.settings.trusted-users = [ "nunu" ];
 
               services.nix-daemon.enable = true;
+              security.sudo.extraConfig = ''
+                nunu ALL = (ALL) NOPASSWD: ALL
+              '';
 
               services.openssh.enable = true;
               users.users.nunu.openssh.authorizedKeys.keys = ssh-keys;

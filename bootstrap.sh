@@ -27,6 +27,6 @@ echo "Activating minimal nix configuration"
 
 NAME="$hostname" nix --extra-experimental-features 'nix-command flakes' \
   run nix-darwin/nix-darwin-24.11#darwin-rebuild -- \
-  switch --impure --flake "github:nunu-ai/macos-bootstrap#$hostname"
+  switch --impure --flake "github:nunu-ai/macos-bootstrap#$hostname" --refresh
 
 echo "Bootstrap complete. Make sure you follow the remaining setup steps."

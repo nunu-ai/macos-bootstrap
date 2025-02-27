@@ -29,6 +29,7 @@
           modules = [
             {
               networking.computerName = "${hostname}";
+              networking.localHostName = "${hostname}";
 
               nix.settings.experimental-features = "nix-command flakes";
               nix.settings.trusted-users = [ "nunu" ];

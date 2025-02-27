@@ -1,6 +1,6 @@
 #! /bin/zsh
 
-set -euo pipefail
+set -eo pipefail
 
 echo "=================================="
 echo "Welcome to nunu MacOS bootstrapper"
